@@ -1,0 +1,96 @@
+html
+    box-sizing border-box
+
+*, *:before, *:after
+    box-sizing inherit
+    margin 0
+    padding 0
+    overflow hidden
+
+*::selection 
+    background deeppink
+
+
+#app
+    font-family 'Fira Sans', sans-serif
+
+    overflow hidden
+    
+    width 100vw
+    height 100vh
+    
+    background-color black
+    color white
+
+    display flex
+    flex-direction column
+    justify-content space-between
+
+    a
+        color white
+        text-decoration none
+
+        transition all 0.2s ease-in
+
+        &.router-link-exact-active
+            color deeppink
+        
+        &:hover
+            color deeppink
+    
+    nav.navigation
+        padding-top 10px
+        text-transform uppercase
+        font-size 22px
+        font-weight 300
+
+        z-index 1
+
+        a.nav-link
+            text-decoration none
+            color white
+            transition all 0.2s ease-in
+            padding 10px 30px
+            user-select none
+
+            &.router-link-exact-active
+                color deeppink
+                // display flex
+                // justify-content center
+                position relative
+                &:hover
+                    padding-right 30px
+                    cursor default
+                
+                &:before
+                    content '\A'
+                    width 0px
+                    height 0px
+                    position absolute
+                    left 16px
+                    top -12px
+                    border-left 20px solid transparent
+                    border-right 20px solid transparent
+                    border-top 20px solid deeppink
+
+            &:hover
+                color deeppink
+                padding-right 100px
+
+    main
+        align-self center
+        z-index 0
+
+    footer
+        display flex
+        justify-content space-around
+
+        z-index 1
+
+        a.footer-link
+            padding 10px 20px
+            user-select none
+            transition all 0.2s ease-in
+
+            &:hover
+                transform scale(1.3) translateY(-10px)

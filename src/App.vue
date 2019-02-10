@@ -1,25 +1,35 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
+<template lang="pug">
+    #app
+        nav.navigation
+            router-link.nav-link(v-for="route in routes" :key="route.path" :to="route.path") {{ route.name }}
 
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
-</style>
+        main
+            router-view
+        
+        footer
+            a.footer-link(href="#" @click="showContacts") Contacts
+            a.footer-link(href="https://github.com/piemekanika") Github
+            a.footer-link(href="https://twitter.com/P13POL1N4") Twitter
+</template>
+
+<script>
+    export default {
+        data: () => {
+            return {
+                routes: []
+            }
+        },
+
+        mounted () {
+            this.$router.options.routes.forEach(route => {
+                this.routes.push(route)
+            })
+        },
+
+        methods: {
+            showContacts () {
+                alert('8 (800) 555 35 35 - it\'s easier to call rather then to owe!')
+            }
+        }
+    }
+</script>
