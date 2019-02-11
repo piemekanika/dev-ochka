@@ -16,17 +16,17 @@ export default new Router({
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: () => import(/* webpackChunkName: "portfolio" */ './views/Portfolio.vue')
+      component: () => import('./views/Portfolio.vue')
     },
     {
       path: '/team',
       name: 'team',
-      component: () => import(/* webpackChunkName: "team" */ './views/Team.vue')
+      component: () => import('./views/Team.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import('./views/About.vue')
     }
   ]
 })
