@@ -3,6 +3,7 @@
         .letter
             .glitch.header {{ header }}
             .glitch.paragraph(v-for="(paragraph, index) in paragraphs" :key="paragraph" :class="'p' + index") {{ paragraph }}
+        .circle
 </template>
 
 <script>
