@@ -8,8 +8,8 @@
         
         footer
             a.footer-link(href="#" @click="showContacts") Contacts
-            a.footer-link(href="https://github.com/piemekanika") Github
-            a.footer-link(href="https://twitter.com/P13POL1N4") Twitter
+            a.footer-link(href="https://github.com/piemekanika" target="_blank") Github
+            a.footer-link(href="https://twitter.com/P13POL1N4" target="_blank") Twitter
 </template>
 
 <script>
