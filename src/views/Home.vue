@@ -25,14 +25,15 @@
                 let x = event.pageX
                 let y = event.pageY
 
-                let slower = 0.06
+                let slower = 0.07
                 x = (window.innerWidth / 2 - x) * slower 
                 y = (window.innerHeight / 2 - y) * slower
                 
                 anime({
                     targets: '#bck-video',
                     translateX: x + 'px',
-                    translateY: y + 'px'
+                    translateY: y + 'px',
+                    easing: 'easeOutCubic'
                 })
             })
         }    
