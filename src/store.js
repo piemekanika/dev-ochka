@@ -4,13 +4,26 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+    state: {
+        mouse: {
+            x: null,
+            y: null
+        }
+    },
 
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
+    mutations: {
+        setMousePosition (state, payload) {
+            state.mouse.x = payload.x
+            state.mouse.y = payload.y
+        }
+    },
+    
+    actions: {
+        updateMousePosition (mouseEvent) {
+            store.commit('setMousePosition', {
+                x: mouseEvent.pageX,
+                y: mouseEvent.pageY
+            })
+        }
+    }
 })
