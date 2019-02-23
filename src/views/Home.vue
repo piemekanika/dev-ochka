@@ -13,6 +13,33 @@
                 .btn.pink.outline Smoke weed
 </template>
 
+<script>
+    import anime from 'animejs/lib/anime.es.js'
+
+    export default {
+        mounted () {
+            console.log('hi')
+
+            document.addEventListener('mousemove', event => {
+                // console.log(event.pageX)
+                let x = event.pageX
+                let y = event.pageY
+
+                let slower = 0.06
+                x = (window.innerWidth / 2 - x) * slower 
+                y = (window.innerHeight / 2 - y) * slower
+                
+                anime({
+                    targets: '#bck-video',
+                    translateX: x + 'px',
+                    translateY: y + 'px'
+                })
+            })
+        }    
+    }
+</script>
+
+
 <style lang="stylus" scoped>
     .background-video
         position absolute
@@ -21,7 +48,7 @@
         z-index -1
         top 50%
         left 50%
-        transform translateX(-50%) translateY(-50%)
+        transform translateX(-50%) translateY(-50%) scale(1.1)
         overflow hidden
     
     .page-content
