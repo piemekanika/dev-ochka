@@ -1,7 +1,7 @@
 <template lang="pug">
     .container.team-page(style="background-color: black; z-index: 2")
         h3 Team page
-            span(style="color: green; font-family: monospace; font-size: 20px; padding-left: 15px;") //coming soon
+            span(style="color: green; font-family: monospace; font-size: 20px; padding-left: 15px;") //coming soon (maybe)
 
             .line(  v-for="n in linesCount"
                     :style="getRandomStyleObject()")
