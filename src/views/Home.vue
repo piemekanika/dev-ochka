@@ -21,7 +21,6 @@
             console.log('hi')
 
             document.addEventListener('mousemove', event => {
-                // console.log(event.pageX)
                 let x = event.pageX
                 let y = event.pageY
 
