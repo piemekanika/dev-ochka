@@ -2,8 +2,9 @@
     #app
         nav.navigation
             router-link.nav-link(v-for="route in routes" :key="route.path" :to="route.path") {{ route.name }}
-
-        router-view
+        
+        main
+            router-view
         
         footer
             a.footer-link(href="#" @click="showContacts") Contacts
