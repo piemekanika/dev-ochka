@@ -39,7 +39,6 @@
     }
 </script>
 
-
 <style lang="stylus" scoped>
     .background-video
         position absolute
