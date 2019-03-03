@@ -15,14 +15,31 @@
     export default {
         data: () => {
             return {
-                routes: []
+                routes: [
+                    {
+                        path: '/',
+                        name: 'Home'
+                    },
+                    {
+                        path: '/portfolio',
+                        name: 'portfolio',
+                    },
+                    {
+                        path: '/team',
+                        name: 'team'
+                    },
+                    {
+                        path: '/about',
+                        name: 'about',
+                    }
+                ]
             }
         },
 
         mounted () {
-            this.$router.options.routes.forEach(route => {
-                this.routes.push(route)
-            })
+            // this.$router.options.routes.forEach(route => {
+            //     this.routes.push(route)
+            // })
         },
 
         methods: {
