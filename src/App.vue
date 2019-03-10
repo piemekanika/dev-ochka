@@ -37,12 +37,6 @@
             }
         },
 
-        mounted () {
-            // this.$router.options.routes.forEach(route => {
-            //     this.routes.push(route)
-            // })
-        },
-
         methods: {
             showContacts () {
                 alert('8 (800) 555 35 35 - it\'s easier to call rather then to owe!')
